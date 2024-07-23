@@ -27,27 +27,32 @@
 // each element of arrays A and B is an integer within the range [0..1,000,000,000].
 
 
-
+//Function to get the common minimum value between two arrays
 function minCommonNum(arrayA, N, arrayB, M){
-    //create set for array A
+
+    //Create set for array A to remove duplicates
     let setA = new Set(arrayA);
 
-    //find minimum common value
+    //Initialize the common minimum value
     let minNum = Infinity;
 
+    //Iterate through each element in array B
     for (let num of arrayB) {
+
+        //Check if current element exists in setA
         if (setA.has(num)) {
+            //Update minNum to be the smaller of the current minNum and the current element of B 
             minNum = Math.min(minNum, num);
         
         }
     }
 
-    //return -1 if no common value was found
+    //return -1 if no common value was found i.e, common minimum value is still infinity
 
     if (minNum === Infinity){
         return -1;
     }
-
+    // Return the common minimum value
     return minNum;
 }
 
@@ -60,8 +65,14 @@ let B1 = [3, 67, 4, 67];
 let A2 = [44, 5, 62, 95, 4];
 let B2 = [93, 70, 34, 85, 17];
 
+let A3 = [67, 3, 53, 4, 1];
+let B3 = [1, 2, 3, 4, 5, 6];
+
 
 console.log(minCommonNum(A1, A1.length, B1, B1.length));
 
 
 console.log(minCommonNum(A2, A2.length, B2, B2.length));
+
+
+console.log(minCommonNum(A3, A3.length, B3, B3.length));
