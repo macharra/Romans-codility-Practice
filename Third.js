@@ -27,6 +27,10 @@
 // each element of arrays A and B is an integer within the range [0..1,000,000,000].
 
 
+
+
+
+
 //Function to get the common minimum value between two arrays
 function minCommonNum(arrayA, N, arrayB, M){
 

@@ -41,3 +41,10 @@
 // N is an integer within the range [1…100,000];
 // each element of array V is an integer within the range [1…10,000];
 // string R is made only of the characters ‘A’ and/or ‘B’.
+
+
+
+
+function getMinimumBal(R, V){
+    let N = R.length
+}
